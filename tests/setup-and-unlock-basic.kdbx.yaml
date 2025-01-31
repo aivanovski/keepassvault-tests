@@ -1,0 +1,7 @@
+- name: Setup and unlock basic.kdbx
+- project: KeePassVault
+
+- runFlow: Unlock database with password
+
+- assertVisible: Basic entry
+

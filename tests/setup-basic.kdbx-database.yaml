@@ -1,0 +1,13 @@
+- name: Setup basic.kdbx database
+- project: KeePassVault
+
+- sendBroadcast:
+    name: com.ivanovsky.passnotes.automation/com.ivanovsky.passnotes.domain.test.TestDataBroadcastReceiver
+    data:
+      - key: fakeFileName
+        value: basic.kdbx
+
+
+- launch: com.ivanovsky.passnotes.automation
+
+- assertVisible: basic.kdbx
