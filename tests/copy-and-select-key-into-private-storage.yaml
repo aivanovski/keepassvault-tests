@@ -1,0 +1,41 @@
+- name: Copy and select key into private storage
+- project: KeePassVault
+
+# Reset and setup data
+- runFlow: Reset data
+- sendBroadcast:
+    name: com.ivanovsky.passnotes.automation/com.ivanovsky.passnotes.domain.test.TestDataBroadcastReceiver
+    data:
+      - key: fakeFileName
+        value: basic-key-file.kdbx
+
+- launch: com.ivanovsky.passnotes.automation
+- assertVisible: basic-key-file.kdbx
+
+# Select key file
+- tapOn: ADD KEY
+- tapOn: Fake File System
+
+- inputText:
+    input: content://fakefs.com
+    contentDescription: URL
+- inputText:
+    input: user
+    contentDescription: Username
+- inputText:
+    input: abc123
+    contentDescription: Password
+- tapOn:
+    contentDescription: Done
+
+- tapOn: keys/
+- longTapOn: key
+- tapOn: Make a copy and Select
+- assertVisible: basic-key-file.kdbx
+
+# Check key was copied to private storage
+- tapOn:
+    contentDescription: Add entry
+- tapOn: Open file
+- tapOn: Private app storage
+- assertVisible: key

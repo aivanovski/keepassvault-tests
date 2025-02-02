@@ -1,0 +1,11 @@
+- name: Remove group
+- project: KeePassVault
+
+- runFlow: Create new group
+
+- longTapOn: Basic Group
+- tapOn: Remove
+- tapOn: YES
+
+- assertVisible: [Database, Basic entry]
+- assertNotVisible: Basic Group
