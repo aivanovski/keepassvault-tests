@@ -1,0 +1,32 @@
+- name: Should select file in picker
+- project: KeePassVault
+
+- runFlow: Reset data and setup basic.kdbx database
+
+- launch: com.ivanovsky.passnotes.automation
+
+# Navigate to Fake FS
+- tapOn:
+    contentDescription: Add entry
+- tapOn: Open file
+- tapOn: Fake File System
+
+# Login to Fake FS
+- inputText:
+    input: content://fakefs.com
+    contentDescription: URL
+- inputText:
+    input: user
+    contentDescription: Username
+- inputText:
+    input: abc123
+    contentDescription: Password
+- tapOn:
+    contentDescription: Done
+
+# Select file
+- tapOn: test-no-changes.kdbx
+- tapOn:
+    contentDescription: Done
+
+- assertVisible: [KeePassVault, test-no-changes.kdbx]
