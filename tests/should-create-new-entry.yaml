@@ -1,0 +1,38 @@
+- name: Should create new entry
+- project: KeePassVault
+
+- runFlow: Unlock database with password
+
+# Open entry editor
+- tapOn:
+    contentDescription: Add entry
+- tapOn: Standard Note
+
+# Input data
+- inputText:
+    input: Created entry
+    contentDescription: Title
+- inputText:
+    input: john.galt@example.com
+    contentDescription: Username
+- inputText:
+    input: abc123
+    contentDescription: Password
+- inputText:
+    input: abc123
+    contentDescription: Confirm password
+- inputText:
+    input: http://johngalt.com
+    contentDescription: URL
+- inputText:
+    input: Created notes
+    contentDescription: Notes
+
+# Save entry
+- tapOn:
+    contentDescription: Done
+
+# Validate data
+- assertVisible: [Database, Created entry]
+- tapOn: Created entry
+- assertVisible: [Title, Created entry, UserName, john.galt@example.com, Password, URL, https://johngalt.com, Notes, Created notes, Modified]

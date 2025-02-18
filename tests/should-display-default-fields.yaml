@@ -1,0 +1,8 @@
+- name: Should display default entry fields
+- project: KeePassVault
+
+- runFlow: Unlock database with password
+
+- tapOn: Basic entry
+
+- assertVisible: [Title, Basic Entry, UserName, john.doe@example.com, Password, URL, https://url.com, Notes, Basic notes, Modified]
