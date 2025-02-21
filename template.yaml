@@ -1,2 +1,4 @@
 - name: Template
 - project: KeePassVault
+
+- launch: com.ivanovsky.passnotes.automation
