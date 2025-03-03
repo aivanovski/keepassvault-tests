@@ -1,0 +1,8 @@
+- name: Should remove entry
+- project: KeePassVault
+
+- runFlow: Unlock database with password
+
+#
+# Steps to be implemented
+#
