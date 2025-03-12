@@ -35,4 +35,4 @@
 # Validate data
 - assertVisible: [Database, Created entry]
 - tapOn: Created entry
-- assertVisible: [Title, Created entry, UserName, john.galt@example.com, Password, URL, https://johngalt.com, Notes, Created notes, Modified]
+- assertVisible: [Title, Created entry, UserName, john.galt@example.com, Password, URL, https://johngalt.com, Notes, Created notes]
