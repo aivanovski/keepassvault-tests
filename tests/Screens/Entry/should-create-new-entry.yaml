@@ -6,7 +6,7 @@
 # Open entry editor
 - tapOn:
     contentDescription: Add entry
-- tapOn: Standard Note
+- tapOn: Standard Entry
 
 # Input data
 - inputText:
