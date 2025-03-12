@@ -22,7 +22,7 @@
     input: abc123
     contentDescription: Confirm password
 - inputText:
-    input: http://johngalt.com
+    input: https://johngalt.com
     contentDescription: URL
 - inputText:
     input: Created notes
