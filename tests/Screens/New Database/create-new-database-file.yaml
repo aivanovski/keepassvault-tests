@@ -13,7 +13,7 @@
     contentDescription: Add entry
 
 - tapOn: New file
-- tapOn: Add note templates
+- tapOn: Add entry templates
 - tapOn: Not selected
 - tapOn: Private app storage
 
