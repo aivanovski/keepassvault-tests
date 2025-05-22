@@ -1,4 +1,4 @@
-- name: Unlock database with key file
+- name: Unlock database with xml key file
 
 - runFlow: Reset data
 - sendBroadcast:
