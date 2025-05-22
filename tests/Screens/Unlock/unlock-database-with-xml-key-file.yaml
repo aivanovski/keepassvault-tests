@@ -36,7 +36,7 @@
 - tapOn:
     contentDescription: Done
 
-- assertVisible: [basic-xml-key-file.kdbx, XML-KEY.KEX]
+- assertVisible: [basic-xml-key-file.kdbx, XML-KEY.KEYX]
 
 - tapOn:
     contentDescription: Unlock button
